@@ -1,0 +1,96 @@
+/* General container for all components */
+.app-container {
+  display: flex;
+  justify-content: space-around; /* Evenly spaces the components */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allows wrapping if there's not enough space */
+  gap: 2em; /* Space between components */
+  padding: 2em;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Individual component container */
+.component {
+  width: 100%;
+  max-width: 400px; /* Max width for each component */
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 0.75em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title styling for each component */
+.component h2 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+
+/* Input styling for all components */
+.component input {
+  width: 80%;
+  padding: 0.8em 1em;
+  border: 2px solid #ddd;
+  border-radius: 0.5em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+/* Input focus state */
+.component input:focus {
+  border-color: #4571f5;
+  outline: none;
+}
+
+/* Button styling */
+.component button {
+  padding: 0.8em 1.2em;
+  background-color: #4571f5;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+/* Button hover state */
+.component button:hover {
+  background-color: #365ab5;
+}
+
+/* Result message styles */
+.component p {
+  font-size: 1.2em;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: #ffffff;
+  transition: background-color 0.5s;
+}
+
+/* Success and error styles */
+.component .success {
+  background-color: #01bd5f;
+}
+
+.component .error {
+  background-color: #f52a3b;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .app-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .component {
+      width: 90%; /* Components take up 90% of the width on small screens */
+      max-width: 100%; /* Remove max-width constraint on small screens */
+  }
+}
